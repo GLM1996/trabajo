@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+.logo {
+    border-radius: 50%;
+    border: 3px solid green;
+    width: 104px;
+    /* Ajuste opcional */
+    height: 104px;
+    /* Ajuste opcional */
+    animation: rotateAlternate 10s linear infinite alternate;
+}
+
+@keyframes rotateAlternate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+li {
+    margin-right: 48px;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    animation: expandBorder 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes expandBorder {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.btn_contact {
+    display: flex;
+    padding: 8px;
+    margin-inline-end: auto;
+    text-decoration: none;
+    color: white;
+    background-color: #EC8305;
+    border-radius: 5px;
+}
+.btn_contact:hover {
+    transform: translate(10px, 0);
+    transition: transform 0.5s;
+}
+
+
+.text-justify {
+    text-align: justify;
+}
+
+.perfil {
+    object-fit: cover;
+    animation: floatUp 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+#skills{
+    background-color: #0B192C;
+}
+#contact{
+    background-color: #0B192C;
+}
+
+/*Media querys*/
+@media (max-width: 576px) {   
+ }
+@media (min-width: 768px) { }
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+
