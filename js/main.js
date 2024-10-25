@@ -6,18 +6,18 @@ $(document).ready(function () {
             $('html, body').stop().animate({
                 scrollTop: target.offset().top - 56
             }, 1000);
-        }
+        }       
+    });
+});
 
-        var navLinks = document.querySelectorAll('.nav-link');
+var navLinks = document.querySelectorAll('.nav-link');
 
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                navLinks.forEach(function (nav) {
-                    nav.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        navLinks.forEach(function (nav) {
+            nav.classList.remove('active');
         });
+        this.classList.add('active');
     });
 });
 
